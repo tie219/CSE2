@@ -8,7 +8,7 @@
 public class Cyclometer {
   //creates class
   public static void main(String[] args) {
-    
+   
  //Input data
         int secsTrip1=480;  //Variable for seconds during first trip
         int secsTrip2=3220;  //Variable for seconds during second trip
