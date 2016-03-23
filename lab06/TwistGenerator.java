@@ -11,21 +11,26 @@ public class TwistGenerator {
       //Construct a Scanner
       Scanner input = new Scanner(System.in);
       
-      int integer = 0;
+      int length = 0;
       boolean condition = false;
+      String wrong = "";
+      String Twist = 
 
       while(condition == false) {
-          System.out.println("Please enter a length as an integer");
-          integer = input.nextInt();
-          System.out.println("test");
-        if (integer == input.nextInt()){
+          System.out.println("Please enter a positive integer:");
+          //First input
+           while (!input.hasNextInt()){
+               //Not a valid integer
+               wrong = input.next();
+               //Stores string
+               System.out.println("Invalid input, try again:");
+           }
+        length = input.nextInt();
           condition = true;
       }
-          else {
-      System.out.println("That was not an integer");
-      }
-  }
-  System.out.println("test");
-}
-}
+      int length1 = length/3;
+      int length2 = length%3;
+      int i = 0;
+      while (i<length){
+      while (length2 == 0){
       
