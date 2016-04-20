@@ -8,7 +8,9 @@ import java.util.Random;
 //Import packages
 public class Grammar {
     public static String adjectives(){
+        Random randomGenerator = new Random();
         int randomAdj = randomGenerator.nextInt(10);
+        String adjective = "";
         switch (randomAdj){
             case 0: adjective = "brave";
             break;
@@ -30,11 +32,15 @@ public class Grammar {
             break;
             case 9: adjective = "upset";
             break;
+            default: adjective = "";
+            break;
         }
         return adjective;
     }
         public static String subjectNoun(){
+         Random randomGenerator = new Random();
         int randomSub = randomGenerator.nextInt(10);
+        String sub = "";
         switch (randomSub){
             case 0: sub = "banana";
             break;
@@ -56,11 +62,15 @@ public class Grammar {
             break;
             case 9: sub = "cat";
             break;
+            default: sub = "";
+            break;
         }
         return sub;
     }
     public static String pastVerb(){
+        Random randomGenerator = new Random();
         int randomVerb = randomGenerator.nextInt(10);
+        String verb = "";
         switch (randomVerb){
             case 0: verb = "played";
             break;
@@ -82,31 +92,37 @@ public class Grammar {
             break;
             case 9: verb = "ran";
             break;
+            default: verb = "";
+            break;
         }
         return verb;
     }
     public static String objNoun(){
+        Random randomGenerator = new Random();
         int randomObj = randomGenerator.nextInt(10);
+        String obj = "";
         switch (randomObj){
-            case 0: String obj = "played";
+            case 0: obj = "car";
             break;
-            case 1: String obj = "walked";
+            case 1: obj = "platypus";
             break;
-            case 2: String obj= "threw";
+            case 2: obj= "owl";
             break;
-            case 3: String obj = "laughed";
+            case 3: obj = "toy";
             break;
-            case 4: String obj = "ate";
+            case 4: obj = "cow";
             break;
-            case 5: String obj = "cried";
+            case 5: obj = "bus";
             break;
-            case 6: String obj = "barked";
+            case 6: obj = "game";
             break;
-            case 7: String obj = "chewed";
+            case 7: obj = "ball";
             break;
-            case 8: String obj = "crushed";
+            case 8: obj = "picture";
             break;
-            case 9: String obj = "ran";
+            case 9: obj = "spoon";
+            break;
+            default: obj = "bowl";
             break;
         }
         return obj;
@@ -116,19 +132,35 @@ public class Grammar {
   public static void main(String[] args) {
       
       Random randomGenerator = new Random();
-      String adjective = "";
-      String sub = "";
-      String verb = "";
-      String obj = "";
-      String x = "";
+      String adjMain = "";
+      String subMain = "";
+      String verbMain = "";
+      String objMain = "";
+      String wordMain = "The";
       
-      for(int i = 0; i<=6; i++){
-          x = objNoun();
-          System.out.print(x);
+      for(int i = 0; i<=5; i++){
+          if(i == 0 || i == 1){
+              wordMain = wordMain +" "+adjectives();
+          }
+          else if(i== 2){
+              wordMain = wordMain +" "+ subjectNoun();
+          }
+          else if( i== 3){
+              wordMain = wordMain +" "+ pastVerb();
+          } 
+          else if(i == 4){
+                  wordMain = wordMain +" "+ "the"  +" "+ adjectives();
+        
+              }
+          else if(i == 5){
+            wordMain = wordMain +" "+ objNoun();
+          }
+              
+          }
+          System.out.println(wordMain+".");
+          }
           
       }
-  }
-  }
       
       
      

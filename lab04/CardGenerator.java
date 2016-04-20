@@ -19,170 +19,19 @@ public class CardGenerator{
       if(randomCard<=13)
       {
         cardVal = randomCard;
-        Suit = Diamond;
+        Suit = "Diamonds";
       }
-      else if(randomCard<=26)
-      {
+      else if(randomCard>13 && randomCard<=26){
         Suit = "Clubs";
         cardVal = randomCard-13;
       }
-      
-      
-      if (randomCard == 1){
-        Suit = "Diamond";
+      else if (randomCard>26 && randomCard<=39){
+        Suit = "Hearts";
+        cardVal = randomCard-26;
       }
-      else if (randomCard == 2){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 3){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 4){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 5){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 6){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 7){
-        Suit = "Diamond";
-      }else if (randomCard == 8){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 9){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 10){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 11){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 12){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 13){
-        Suit = "Diamond";
-      }
-      else if (randomCard == 14){
-        Suit = "club";
-        randomCard - 13;
-      }
-      else if (randomCard == 15){
-        Suit = "club";
-      }
-      else if (randomCard == 16){
-        Suit = "club";
-      }
-      else if (randomCard == 17){
-        Suit = "club";
-      }
-      else if (randomCard == 18){
-        Suit = "club";
-      }
-      else if (randomCard == 19){
-        Suit = "club";
-      }
-      else if (randomCard == 20){
-        Suit = "club";
-      }
-      else if (randomCard == 21){
-        Suit = "club";
-      }
-      else if (randomCard == 22){
-        Suit = "club";
-      }
-      else if (randomCard == 23){
-        Suit = "club";
-      }
-      else if (randomCard == 24){
-        Suit = "club";
-      }
-      else if (randomCard == 25){
-        Suit = "club";
-      }
-      else if (randomCard == 26){
-        Suit = "club";
-      }
-       else if (randomCard == 27){
-        Suit = "heart";
-      }
-        else if (randomCard == 28){
-        Suit = "heart";
-      }
-        else if (randomCard == 29){
-        Suit = "heart";
-      }  
-      else if (randomCard == 30){
-        Suit = "heart";
-      } 
-      else if (randomCard == 31){
-        Suit = "heart";
-      } 
-      else if (randomCard == 32){
-        Suit = "heart";
-      }  
-      else if (randomCard == 33){
-        Suit = "heart";
-      } 
-      else if (randomCard == 34){
-        Suit = "heart";
-      }  
-      else if (randomCard == 35){
-        Suit = "heart";
-      } 
-      else if (randomCard == 36){
-        Suit = "heart";
-      } 
-      else if (randomCard == 37){
-        Suit = "heart";
-      }
-        else if (randomCard == 38){
-        Suit = "heart";
-      }
-        else if (randomCard == 39){
-        Suit = "heart";
-      }
-      else if (randomCard == 40){
-        Suit = "spades";
-      }
-      else if (randomCard == 41){
-        Suit = "spades";
-      }
-      else if (randomCard == 42){
-        Suit = "spades";
-      }
-      else if (randomCard == 43){
-        Suit = "spades";
-      }
-      else if (randomCard == 44){
-        Suit = "spades";
-      }
-      else if (randomCard == 45){
-        Suit = "spades";
-      }
-      else if (randomCard == 46){
-        Suit = "spades";
-      }
-      else if (randomCard == 47){
-        Suit = "spades";
-      }
-      else if (randomCard == 48){
-        Suit = "spades";
-      }
-      else if (randomCard == 49){
-        Suit = "spades";
-      }
-      else if (randomCard == 50){
-        Suit = "spades";
-      }
-      else if (randomCard == 51){
-        Suit = "spades";
-      }
-      else if (randomCard == 52){
-        Suit = "spades";
+      else if (randomCard>39 && randomCard<=52){
+        Suit = "Spades";
+        cardVal = randomCard-39;
       }
       
       //Using switch statements to assign identity of card
@@ -218,7 +67,7 @@ public class CardGenerator{
       }
                  
         //Print Statements 
-        System.out.println("You picked the" +Card+ "of" +Suit);
+        System.out.println("You picked the"+" " +Card+" "+ "of" +" "+ Suit);
   }
 }
       
