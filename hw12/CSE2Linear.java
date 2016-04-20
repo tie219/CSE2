@@ -63,23 +63,35 @@ public class CSE2Linear {
   System.out.println("\n");
   System.out.println("Enter a grade to search for:");
         int searchGrade = input.nextInt();
+        int firstElem = 0;
+        int lastElem = (grades.length-1);
+        int middleElem = 0;
+        int i =0;
+
         //Performs linear search in array and counts interations
-  for(int i = 0; i<grades.length;i++){
-      if(grades[i] == searchGrade){
-         i = i+1;
+  while(firstElem<=lastElem){
+   middleElem = (firstElem+lastElem)/2;
+     if(searchGrade>grades[lastElem]){
+         System.out.println("Sorry "+searchGrade+" was not found with "+(i+1)+" iterations");
+         break;
+       }
+      else if(grades[middleElem] == searchGrade){
           System.out.println(searchGrade+" "+"was found in the list with "+i+" iterations");
           break;
       }
-      //If the value is not found
-      else if(i == 13){
-       int w = i+2;
-       System.out.println("Sorry "+searchGrade+" was not found with "+(w)+" iterations");
+      else if(searchGrade<grades[middleElem]){
+       lastElem = middleElem - 1;
       }
+      else if(searchGrade>grades[middleElem]){
+      firstElem = middleElem + 1;
+  }
+      
+       i++;
   }
   int randomNum = 0;
   int value = 0;
   //Shuffling random array
-  for(int i = 0; i<grades.length;i++){
+  for(i = 0; i<grades.length;i++){
     randomNum = (int) (Math.random()*grades.length);
     value = grades[randomNum];
     grades[randomNum] = grades[i];
@@ -87,14 +99,14 @@ public class CSE2Linear {
   }
   //Displays randomized array to user
   System.out.println("Scrambled:");
-  for(int i = 0; i<grades.length;i++){
+  for(i = 0; i<grades.length;i++){
       System.out.print(grades[i]+" ");
   }
  System.out.println("\n");
  System.out.println("Enter a grade to search for:");
  //Another linear search prompted by the user
        searchGrade = input.nextInt();
-  for(int i = 0; i<grades.length;i++){
+  for(i= 0; i<grades.length;i++){
       if(grades[i] == searchGrade){
          i = i+1;
           System.out.println(searchGrade+" "+"was found in the list with "+i+" iterations");
